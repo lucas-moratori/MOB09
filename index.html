@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card-tela">
+    <h3>Degrau 7: O Sistema Completo (Com I/O e Reset)</h3>
+
+    <div class="linha-inputs">
+        <input id="nome" placeholder="Nome">
+        <input id="email" placeholder="E-mail">
+        <input id="idade" placeholder="Idade" type="number" min="0" max="120">
+        <input id="apelido" placeholder="Apelido">
+        <button class="btn-acao btn-azul" id="btnSalvar" onclick="salvar()">Salvar</button>
+    </div>
+
+    <div class="linha-inputs barra-ferramentas">
+        <button class="btn-acao btn-verde" onclick="exportar()">💾 Exportar</button>
+        <label class="btn-acao btn-roxo">
+            📂 Importar JSON
+            <input type="file" accept=".json" onchange="importar(event)" style="display:none;">
+        <button class="btn-acao btn-vermelho" onclick="resetar()">🔄 Resetar Tudo</button>
+    </div>
+    <hr>
+    
+    <center> <table class="tabela-dados">
+        <thead><tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Idade</th>
+            <th>Apelido</th>
+            <th>Ações</th></tr>
+        </thead>
+        <tbody id="lista"></tbody>
+    </table>
+</div>
+</body>
+<script src="script.js"></script>
+</html>

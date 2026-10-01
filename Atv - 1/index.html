@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Alunos</h1>
+<input id="nome" placeholder="Nome">
+<input id="email" placeholder="E-mail">
+<input id="idade" type="number" placeholder="Idade" min="0" max="120">
+<button onclick="salvar()">Salvar</button>
+<button onclick="exportar()">💾 Exportar</button>
+<input type="file" accept=".json" onchange="importar(event)">
+<button onclick="resetar()">🔄 Resetar</button>
+<hr>
+<table border="1">
+<tr><th>ID</th><th>Nome</th><th>E-mail</th><th>Idade</th><th>Ações</th></tr>
+<tbody id="lista"></tbody>
+</table>
+</body>
+<script src="script.js"></script>
+</html>
